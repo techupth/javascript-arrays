@@ -42,3 +42,24 @@ let orders = [
 ];
 
 // Start coding here
+
+// ให้ตรวจสอบ orders ว่าเป็น Array จริงๆ หรือไม่
+console.log(Array.isArray(orders));
+
+// แสดงผลลัพธ์ของจำนวนยอดซื้อสินค้าทั้งหมดของ Kennith Bussons ออกมาทางหน้าจอ
+console.log(orders[4].productPrice * orders[4].productQuantity);
+
+// แสดงผลลัพธ์ของจำนวนยอดซื้อสินค้ารวมทั้งหมดของ Anjela Joannet และ Celia Dary ออกมาทางหน้าจอ
+console.log(
+  orders[3].productPrice * orders[3].productQuantity +
+    orders[1].productPrice * orders[1].productQuantity
+);
+
+// แสดงผลลัพธ์ของ creditCardType ของ Toinette Blindermann
+console.log(orders[2].creditCardType);
+
+// ให้ลบข้อมูล Order ของ Celia Dary
+let firstOrders = orders.splice(0, 1);
+let secondOrders = orders.splice(1);
+let newOrders = firstOrders.concat(secondOrders);
+console.log(newOrders);
