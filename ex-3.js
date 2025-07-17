@@ -12,3 +12,6 @@ const employees = [
 ];
 
 // Start coding here
+employees[0].hobbies.push("Watching basketball");
+
+console.log(employees[0].hobbies); // Output: { name: "Alex", age: 25, hobbies: ["Cryptocurrency", "Social media", "Watching basketball"] }
