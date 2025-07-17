@@ -42,7 +42,15 @@ let orders = [
 ];
 
 // Start coding here
-let isArray;
-let creditCardTypeOfBlindermann;
-let productQuantityOfJoannet;
-let totalPurchaseOfDary;
+let isArray = Array.isArray(orders);
+let creditCardTypeOfBlindermann = orders[2].creditCardType;
+let productQuantityOfJoannet = orders[2].creditCardType ="visa";
+let totalPurchaseOfDary = orders[3].productQuantity;
+totalPurchaseOfDary = orders[1].productPrice * orders[1].productQuantity;
+orders = orders.filter(order => order.customerName !== "Brenn Hugk");
+
+console.log("isArray:", isArray);
+console.log("creditCardTypeOfBlindermann:", creditCardTypeOfBlindermann);
+console.log("productQuantityOfJoannet:", productQuantityOfJoannet);
+console.log("totalPurchaseOfDary:", totalPurchaseOfDary);
+console.log("Updated orders:", orders);

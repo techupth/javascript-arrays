@@ -12,3 +12,5 @@ const employees = [
 ];
 
 // Start coding here
+employees[1].hobbies.push("Watching Basketball");
+console.log(employees[1].hobbies); // Output: [ 'Cryptocurrency', 'Social media', 'Watching Basketball' ] 
