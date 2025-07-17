@@ -41,8 +41,22 @@ let orders = [
   },
 ];
 
-// Start coding here
-let isArray;
-let creditCardTypeOfBlindermann;
-let productQuantityOfJoannet;
-let totalPurchaseOfDary;
+
+let isArray = Array.isArray(orders);
+let creditCardTypeOfBlindermann = orders.find(order => order.customerName === "Toinette Blindermann").creditCardType;
+orders.find(order => order.customerName === "Toinette Blindermann").creditCardType = "visa";
+let productQuantityOfJoannet = orders.find(order => order.customerName === "Anjela Joannet").productQuantity;
+let daryOrder = orders.find(order => order.customerName === "Celia Dary");
+let totalPurchaseOfDary = daryOrder.productPrice * daryOrder.productQuantity;
+let indexToRemove = orders.findIndex(order => order.customerName === "Brenn Hugk");
+if (indexToRemove !== -1) {
+  orders.splice(indexToRemove, 1);
+}
+
+
+console.log("isArray:", isArray);
+console.log("creditCardTypeOfBlindermann:", creditCardTypeOfBlindermann);
+console.log("productQuantityOfJoannet:", productQuantityOfJoannet);
+console.log("totalPurchaseOfDary:", totalPurchaseOfDary);
+console.log("orders:", orders);
+
