@@ -21,4 +21,12 @@ const employees = [
   },
 ];
 
-// Start coding here
+
+const indexToRemove = employees.findIndex((employee) => employee.name === "Kody");
+
+
+if (indexToRemove !== -1) {
+  employees.splice(indexToRemove, 1);
+}
+
+console.log(employees);
