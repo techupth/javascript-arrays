@@ -11,6 +11,10 @@ const employees = [
   },
 ];
 // Start coding here
-let alex;
-let alexHobbies;
-let alexAndJamesAge;
+let alex = employees[1];
+let alexHobbies = alex.hobbies;
+let alexAndJamesAge = employees[0].age + employees[1].age; // 40 + 25 = 65
+
+console.log(alex);
+console.log(alexHobbies);
+console.log(alexAndJamesAge); // Output: 65
